@@ -4,21 +4,41 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args){
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Введите 1 число: ");
+        int num1 = scanner.nextInt();
 
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Введите число 1: ");
-        float num1 = scan.nextFloat();
+        System.out.print("Введите 2 число: ");
+        int num2 = scanner.nextInt();
 
-        System.out.println("Введите число 2: ");
-        float num2 = scan.nextFloat();
+        int res;
 
-        float res1 = num1 + num2;
-        float res2 = num1 - num2;
-        float res3 = num1 * num2;
-        float res4 = num1 / num2;
+        System.out.print("Действие: ");
+        String action = scanner.nextLine();
+        action = scanner.nextLine();
 
-        System.out.println("Результат: ");
+        switch(action){
+            case "+":
+                res = num1 + num2;
+                System.out.println(res);
+                break;
+            case "-":
+                res = num1 - num2;
+                System.out.println(res);
+                break;
+            case "*":
+                res = num1 * num2;
+                System.out.println(res);
+                break;
+            case "/":
+                if (num2 == 0)
+                    System.out.println("Error");
+                else{
+                res = num1 / num2;
+                System.out.println(res);}
 
-        System.out.println(res1 + "\n" + res2 + "\n" + res3 + "\n" + res4);
+                break;
+
+        }
     }
 }
