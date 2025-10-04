@@ -1,18 +1,24 @@
+//Егор, ты прошел 6/21 урок.
+
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args){
 
-        System.out.println("Hello");
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Введите число 1: ");
+        float num1 = scan.nextFloat();
 
-        short age = 120;
-        System.out.println(age);
+        System.out.println("Введите число 2: ");
+        float num2 = scan.nextFloat();
 
-        float num = 4.555f;
-        System.out.println(num);
+        float res1 = num1 + num2;
+        float res2 = num1 - num2;
+        float res3 = num1 * num2;
+        float res4 = num1 / num2;
 
-        char ch = 't';
-        String name = "Monday";
-        System.out.println(name);
+        System.out.println("Результат: ");
 
-
+        System.out.println(res1 + "\n" + res2 + "\n" + res3 + "\n" + res4);
     }
 }
